@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <title>Chuck api</title>
+  </head>
+  <body>
+    <!-- CONSEGNA:
+    Scaricare la lista delle categorie dalle api e mostrarle all’interno di una select.
+
+    Fare un bottone che al click richiama le api per ottenere un ‘chuck joke’ in
+    base alla categoria selezionata
+
+    Aggiungere a un contenitore il joke ottenuto mostrando l’icona e
+    la frase (usiamo HandleBars...)
+
+    Fare un text input che ricerca un joke in base al testo inserito,
+    e se ne trova almeno uno, aggiunge il primo trovato al contenitore -->
+
+    <!-- select categorie -->
+    <div class="">
+      <label for="">Seleziona la categoria che ti interessa</label>
+      <select class="category" name=""></select>
+
+      <!-- bottone che al click richiama le api in base alla categoria selezionata -->
+      <button id="bottone-search" type="button" name="button">Cerca</button>
+    </div>
+
+    <!-- text input che ricerca un joke -->
+    <div class="">
+      <label for="">Inserisci il testo e clicca invio</label>
+      <input id="text-input" type="text" name="" value="">
+    </div>
+
+    <!-- contenitore joke -->
+    <div class="contenitore-joke"></div>
+
+    <!-- handlebar per inserimento risultati ricerca per categoria in pagina -->
+    <script id="category-template" type="text/x-handlebars-template">
+      <div class="entry">
+        <img src="{{img}}" alt="">
+        <h1>{{joke}}</h1>
+        <span>{{data}}</span>
+      </div>
+    </script>
+
+  </body>
+</html>
