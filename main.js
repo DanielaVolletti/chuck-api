@@ -25,6 +25,8 @@ $(document).ready(function () {
       },
       success: function (data) {
         makeJoke(data);
+      }, error: function (error) {
+          alert(error);
       }
     })
   });
@@ -40,12 +42,13 @@ $(document).ready(function () {
             query: input
           },
           success: function (data) {
-            console.log(data);
             if(data.total > 0){
               var random = Math.floor(Math.random() * data.total);
               var joke = data.result[random];
               makeJoke(joke);
             }
+          }, error: function (error) {
+              alert(error);
           }
 
         })
